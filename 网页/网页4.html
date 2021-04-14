@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>html form 演示</title>
+		<style type="text/css">
+			fieldset {
+				margin-bottom:40px;
+			}
+			.biaoge
+			{
+				 border: solid 1px black;
+				 width: 800px;
+				 height: 1200px;
+				 padding: 20px;
+				 margin-left: auto;
+				 margin-right: auto;
+				 background-color: white;
+
+			}
+				ul{
+			list-style-type:none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			margin-top:0;
+			padding: 0;
+			height: 54.5px;
+			overflow: hidden;
+			z-index: 2;
+			background-color: #99CCFF;
+		}
+		li{
+			float: left;
+		}
+		li a{
+			display: block;
+			color: black;
+			text-align: center;
+			padding: 15px 54.5px;
+			text-decoration: none;
+		}
+		li a:hover {
+                background-color: #FFFFCC;
+		}
+		li a:active {
+           color: blue;
+		}
+		</style>
+	</head>
+
+	<body background=".\网页4\o.jpg">
+		<ul>
+		<li><img  src=".\网页4\OIP.jpg"width="100" height="54.5"></li>
+		<div class="liubai1"></div>
+		<li><a href=".\index.html">任天堂</a></li>
+		<li><a href="">switch</a></li>
+		<li><a href="">switch游戏</a></li>
+		<li><a href=".\网页4.html">反馈</a></li>
+		<li style="float: right"><input type="text" name="search">
+		<input type="submit" name="search" value="搜索"></li>
+	</ul>
+		<div style="text-align: center;">
+			<h1 style="margin-top: 50px;">反馈表</h1>
+		</div>
+     <div class="biaoge">
+     		<form name="formTest" action="save.php" method="post"  onreset="alert('唉，又要重填')" onsubmit="alert('我被送到服务端去啦！')" enctype="multipart/form-data"  >
+	<fieldset>
+		<legend>昵称</legend>
+			<input type="text" name="textTest"
+			value="" maxlength="9"
+			size="20"/>
+	</fieldset>
+	<fieldset>
+		<legend>对问题进行详细描述</legend>
+			<textarea name="textareaTest"
+				cols="105"
+				rows="10" >
+			</textarea>
+	
+	</fieldset>
+
+	<fieldset>
+		<legend>性别</legend>
+			<input type="radio" name="radioTest" checked="checked"/>男
+			<input type="radio" name="radioTest" />女
+	</fieldset>
+
+	<fieldset>
+		<legend>以下有几个游戏您已经买入或者接触过？</legend>
+			<input type="checkbox" name="checkboxTest" checked="checked" />塞尔达
+			<input type="checkbox" name="checkboxTest" />马车8
+			<input type="checkbox" name="checkboxTest" />动森
+			<input type="checkbox" name="checkboxTest" checked="checked"/>大乱斗
+			<input type="checkbox" name="checkboxTest" checked="checked"/>马造
+	</fieldset>
+
+	<fieldset>
+		<legend>您下一个想要购买的游戏？</legend>
+			<select name="comboxTest">
+		        <option>怪猎崛起</option>
+		        <option>文明6</option>
+		         <option>空洞骑士</option>
+		          <option>异度之刃2</option>
+		        <option selected="true">死亡细胞</option>
+			</select>
+	</fieldset>
+
+	<fieldset>
+		<legend>照片或者文档</legend>
+			<input type="file" name="fileTest" size="30" />
+	</fieldset>
+
+
+	<input type="submit" value="提交到服务端"/>
+	<input type="reset" value="重新填写"/>
+	</form>
+	<script type="text/javascript" >
+		function　iknow(sType){
+			var f=document.forms[0];
+			//var f=document.formTest;
+			switch(sType){
+				case "text":
+					alert(f.textTest.value);
+					//f.textTest.value="这是第二个新的输入";
+					break;
+				case "password":
+					alert(f.passwordTest.value);
+					break;
+
+				case "textarea":
+					alert(f.textareaTest.value) ;
+					break;
+
+				case "radio":
+					for (var i=0;i<f.radioTest.length;i++)
+						if (f.radioTest[i].checked==true)
+							alert("第"　+　(i+1)  +"项被选中了！")
+					break;
+
+				case "checkbox":
+					for(var i=0;i<f.checkboxTest.length;i++)
+						if (f.checkboxTest[i].checked==true)
+							alert("第"　+　(i+1)  +"项被选中了！")
+					break;
+
+				case "combox":
+					var i=f.comboxTest.selectedIndex
+					alert("第"　+ (i+1) + "项被选中了:"
+					+ f.comboxTest.options[i].text);
+					break;
+
+				case "listbox":
+					for(var i=0;i<f.listboxTest.length;i++)
+						if (f.listboxTest.options[i].selected==true)
+							alert("第"　+　(i+1)  + "项被选中了:" + f.listboxTest.options[i].text)
+					break;
+
+				case "file":
+					alert(f.fileTest.value)
+					break;
+
+				case "hidden":
+					alert(f.hiddenTest.value)
+				}
+		}
+	</script>
+     </div>
+	</body></html>
