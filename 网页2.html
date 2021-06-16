@@ -3,181 +3,96 @@
 <head>
 	<title>目录</title>
 	<meta charset="utf-8">
-	<style>
-		ul{
-			list-style-type:none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			margin:0;
-			padding: 0;
-			height:53px;
-			overflow: hidden;
-			z-index: 2;
-			background-color: #99CCFF;
-		}
-		li{
-			float: left;
-		}
-		li a{
-			display: block;
-			color: black;
-			text-align: center;
-			padding: 15px 53px;
-			text-decoration: none;
-		}
-		li a:hover {
-                background-color: #FFFFCC;
-		}
-		li a:active {
-           color: blue;
-		}
-		p{
-			margin-top: 54.5px;
-			top: 100px;
-			color: black;
-		}
-		.Switch{
-			border:1px solid black;
-			margin-left:auto;
-			margin-right: auto;
-			width:800px;
-			height: 300px;
-			margin-bottom: 20px;
-			padding: 0px;
-				}
-		.game{
-			border:1px solid black;
-			margin-left:auto;
-			margin-right: auto;
-			width:800px;
-			height: 420px;
-			margin-bottom: 20px;
-			padding: 0px;
-		}
-		.gongsi
-		{
-			border:1px solid black;
-			margin-left:auto;
-			margin-right: auto;
-			width:800px;
-			height: 300px;
-			margin-bottom: 20px;
-			padding: 0px;
-		}
-		.button{
-            background: url('C:\Users\17237\Desktop\2.jpg');
-   				border: none;
-    			color: white;
-    			padding: 15px 32px;
-    			display: inline-block;
-    			font-size: 16px;
-    			margin: 4px 2px;
-    			cursor: pointer;
-    			width: 100%;
-    			text-align: left;
-		}
-		
-	</style>
-
+    <script src="./jquary.js"></script>
+    <script type="text/javascript" src="./js/ejs.min.js"></script>
+         <link rel="stylesheet" href="./css/index.css">
 </head>
-<body background=".\网页2\o.jpg">
-    <div><ul>
-		<li><img  src=".\网页2\OIP.jpg"width="100" height="53"></li>
-		<li><a href=".\index.html">任天堂</a></li>
-		<li><a href="">switch</a></li>
-		<li><a href="">switch游戏</a></li>
-        <li><a href=".\网页4.html">反馈</a></li>
-		<li style="float: right"><input type="text" name="search">
-		<input type="submit" name="search" value="搜索"></li>
-	</ul>
-	</div>
+<body background=".\picture\o.jpg" onload="checkCookie()">
+    <div id="page"></div>
 	<div style="display: block;height: 30px"></div>
 	<h2 style="text-align: center;">目录</h2>
 	<div class="Switch">
      <button class="button" style="font-size:30px;text-align: center;">
           <a style="text-decoration: none;" href=".\网页2.html">Nintendo Switch</a>
      </button>
-     <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href=".\网页3.html">什么是Nintendo Switch？</a>
-     	<a style="text-decoration: none;float: left;" href=".\网页3.html">-------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href=".\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href=".\网页3.html">佚名</a>
-     </button>
-      <button class="button">
-     	<a class="web-font" style="text-decoration: none;float: left;" href=".\网页3.html">在御三家中为何它能够脱颖而出？</a>
-     	<a style="text-decoration: none;float: left;" href=".\网页3.html">--------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href=".\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href=".\网页3.html">佚名</a>
-     </button>
-      <button class="button">
-     	<a class="web-font" style="text-decoration: none;float: left;" href=".\网页3.html">对于switch的版本选择的建议</a>
-     	<a style="text-decoration: none;float: left;" href=".\网页3.html">--------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href=".\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href=".\网页3.html">佚名</a>
-     </button>
-     
+     <div id="main"></div>
 	</div>
 	<div class="game">
 		<button class="button" style="font-size:30px;text-align: center;">
           <a style="text-decoration: none;" href=".\网页2.html">Switch Games</a>
      </button>
-     <button class="button">
-     	<a class="web-font" style="text-decoration: none;float: left;" href=".\网页3.html">全球累计发行量最高的10款游戏</a>
-     	<a style="text-decoration: none;float: left;" href=".\网页3.html">----------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
-      <button class="button">
-     	<a  class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">游戏版本的建议</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">--------------------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
-      <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">塞尔达.旷野之息</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">-------------------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
-     <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">马里奥赛车8豪华版</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">---------------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
-     <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">集合吧！动物森友会</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">--------------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
+     <div id="main1"></div>
 	</div>
 	<div class="gongsi">
 		<button class="button" style="font-size:30px;text-align: center;">
-          <a style="text-decoration: none;" href="C:\Users\17237\Desktop\素材\网页2.html">Nintendo</a>
+          <a style="text-decoration: none;" href=".\网页2.html">Nintendo</a>
      </button>
-     <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">Nintendo的发家史</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">-----------------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
-      <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">计较出名的几家工作室</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">-----------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
-      <button class="button">
-     	<a class="web-font"style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">对于游戏的态度</a>
-     	<a style="text-decoration: none;float: left;" href="C:\Users\17237\Desktop\素材\网页3.html">--------------------------------------------------------------------------------------------</a>
-     	<a style="text-decoration: none;float: right;margin-top: 3px;" href="C:\Users\17237\Desktop\素材\网页3.html">2021.4.13</a>
-     	<a style="text-decoration: none;float: right;margin-right: 30px;margin-top:0px;" href="C:\Users\17237\Desktop\素材\网页3.html">佚名</a>
-     </button>
+     <div id="main2"></div>
      
 	</div>
-
+<script type="text/javascript">
+    get_mode();
+    function get_mode()
+    {
+        $.get("./json/data.json",function(posts)
+        {
+            $.get("./tpl/mode.tpl",function(result)
+        {
+            
+            var a=ejs.compile(result)(posts);
+            $("#main").html(a);
+        });
+        }); 
+        $.get("./json/data1.json",function(posts)
+        {
+            $.get("./tpl/mode.tpl",function(result)
+        {
+            
+            var a=ejs.compile(result)(posts);
+            $("#main1").html(a);
+        });
+        }); 
+        $.get("./json/data2.json",function(posts)
+        {
+            $.get("./tpl/mode.tpl",function(result)
+        {
+            
+            var a=ejs.compile(result)(posts);
+            $("#main2").html(a);
+        });
+        }); 
+    }
+     $.get("./addition/2.html",function(result)
+    {
+        $("#page").html(result);
+    });
+function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*1*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}
+function checkCookie(){
+    var user=getCookie("username");
+    if (user!=""){
+        alert("欢迎 " + user + " 再次访问");
+    }
+    else {
+        user = prompt("请输入你的名字:","");
+          if (user!="" && user!=null){
+            setCookie("username",user,30);
+        }
+    }
+}
+</script>
 </body>
 </html>

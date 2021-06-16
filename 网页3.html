@@ -3,126 +3,43 @@
 <head>
 	<title>swich</title>
 	<meta charset="utf-8">
-	<style>
-		ul{
-			list-style-type:none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			margin-top:0;
-			padding: 0;
-			height: 54.5px;
-			overflow: hidden;
-			z-index: 2;
-			background-color: #99CCFF;
-		}
-		li{
-			float: left;
-		}
-		li a{
-			display: block;
-			color: black;
-			text-align: center;
-			padding: 15px 40px;
-			text-decoration: none;
-		}
-		li a:hover {
-                background-color: #FFFFCC;
-		}
-		li a:active {
-           color: blue;
-		}
-		p{
-			margin-top: 54.5px;
-			top: 100px;
-			color: black;
-		}
-		.gongsi{
-			top: 100px;
-			border:1px solid black;
-			padding-top:0;
-			margin-top: 60px;
-			margin-left:auto;
-			margin-right: auto;
-			width:1000px;
-			height: 1870px;
-				}
-		.picture{
-			display: inline-block;
-			width: 128px;
-			height: 128px;
-			background-image: url("C:\Users\17237\Desktop\素材\switch游戏机介绍\游戏机及相关图片\1.png");
-		}
-		.picture.part{
-			background-position: 0px 0px;
-		}
-		.switch{
-			border:solid 1px black;
-			float: left;
-			width: 200px;
-			height: 310px;
-			margin-left: 100px;
-			margin-bottom: 50px;
-			border-radius: 0 0 50px 50px;
-		}
-		div img
-		{
-			width:200px;
-			height:100px;
-		}
-		@font-face {font-family: 'webfont';
-    src: url('webfont.eot'); /* IE9*/
-    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('webfont.woff') format('woff'), /* chrome、firefox */
-    url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
-}
-.web-font{
-    font-family:"webfont" !important;
-    font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
-}
-	</style>
-
+   <script type="text/javascript" src="./js/ejs.min.js"></script>
+   <script src="./js/jquary.js"></script>
+    <link rel="stylesheet" href="./css/web3.css">
+    <style type="text/css">
+    	.p1{
+ 	width: 474px; height: 266px;
+    background: url('./picture/css_sprites.png') -10px -458px;
+    	}
+    </style>
 </head>
-<body background=".\网页3\o.jpg">
-    <ul>
-		<li><img  src=".\网页3\OIP.jpg"width="100" height="54.4"></li>
-		<li><a href=".\index.html">任天堂</a></li>
-		<li><a href="">switch</a></li>
-		<li><a href="">switch游戏</a></li>
-		<li><a href=".\网页4.html">反馈</a></li>
-		<li style="float: right"><input type="text" name="search">
-		<input type="submit" name="search" value="搜索"></li>
-	</ul>
+<body background=".\picture\o.jpg" onload="checkCookie()">
+    <div id="title"></div>
 	<div style="clear: both;"></div>
 	<div style="display: block;width: 500px;"></div>
 <div class="gongsi">
 	<h1 style="text-align: center;">Nintendo Switch——真正意义上的跨时代主机</h2>
 	<p style="text-align: center;font-size: 30px;font">什么是switch？它是干什么的？</p>
-	<center><img src=".\网页3\3.jpg" width="30%" height="10%"></center>
+	<center><img src=".\picture\3.jpg" width="30%" height="10%"></center>
 	<p class="web-font" style="font-size: 25px">任天堂Switch（Nintendo Switch），简称NS，是任天堂公司于2017年3月发布的主机，采用家用机、掌机一体化设计。新机不锁区，支持1920*1080电视输出和1280*720掌上输出。港版2017年3月3日发售，台版12月1日发售，中国大陆版2019年12月4日由腾讯发售。
 Nintendo Switch是任天堂前社长岩田聪最后一部参与开发的硬件产品。NS首秀获得强烈反响，预告片YouTube首日播放量超一千万回，一度登顶YouTube播放榜首，风头压过美国大选. 
 公开的NS游戏中，已超过160款游戏宣布支持中文。  Nintendo Switch于2019年1月29日起支持中文系统语言，包括简体中文与繁体中文。
 《时代》评2017十大数码产品NS力压iPhone X登顶 。NS自2017年3月上市以来，仅用9个月就卖出超过1400万台，超过WiiU 1350万台的累积总销量。截止2020年12月31日Switch主机销量7987万台。软件销量（不含无实体版游戏）5.32亿。
 2019年7月24日，腾讯正式代理引进Nintendo Switch。</p>
 <div class="switch">
-	<img src=".\网页3\mode-3.jpg" >
+	<img src=".\picture\mode-3.jpg" >
 	<p style="font-size: 25px">
 		便携的单机模式，让你随时随地玩到自己最喜欢的游戏！
 	</p>
 </div>
 <div class="switch">
-	<img src=".\网页3\4.jpg" >
+	<img src=".\picture\4.jpg" >
 	<p style="font-size: 25px">
 		方便的输出转换方式，让你在更优秀的屏幕上享受游戏！
 	</p>
 </div>
 <div class="switch" style="float: right; margin-right:90px;">
-	<img src=".\网页3\2.jpg" >
+	<img src=".\picture\游戏机2.jpg" >
 	<p style="font-size: 25px">
 		一个机子多人游玩，让你的朋友一起加入你的冒险！
 	</p>
@@ -141,8 +58,42 @@ Nintendo Switch是任天堂前社长岩田聪最后一部参与开发的硬件�
 <p class="web-font" style="font-size: 25px">
 	但是他的方便性以及它的游戏性就注定它的受众十分广泛，小到上小学的小朋友，大到30 40的上班族，都可以感受到它的魅力所在！
 </p>
+<center><div class="p1"></div></center>
 </div>
+<div class="fixed"><img src="./picture/5.jpg"></div>
 
-
+<script type="text/javascript">
+	$.get("./addition/2.html",function(result)
+    {
+        $("#title").html(result);
+    });
+    function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*1*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}
+function checkCookie(){
+    var user=getCookie("username");
+    if (user!=""){
+        alert("欢迎 " + user + " 再次访问");
+    }
+    else {
+        user = prompt("请输入你的名字:","");
+          if (user!="" && user!=null){
+            setCookie("username",user,30);
+        }
+    }
+}
+</script>
 </body>
 </html>
