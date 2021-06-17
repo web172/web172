@@ -5,13 +5,9 @@
 	<meta charset="utf-8">
    <script type="text/javascript" src="./js/ejs.min.js"></script>
    <script src="./js/jquary.js"></script>
+   <script src="./js/web3.js"></script>
     <link rel="stylesheet" href="./css/web3.css">
-    <style type="text/css">
-    	.p1{
- 	width: 474px; height: 266px;
-    background: url('./picture/css_sprites.png') -10px -458px;
-    	}
-    </style>
+    <link rel="icon" type="text/css" href="./picture/switch.png">
 </head>
 <body background=".\picture\o.jpg" onload="checkCookie()">
     <div id="title"></div>
@@ -63,37 +59,7 @@ Nintendo Switch是任天堂前社长岩田聪最后一部参与开发的硬件�
 <div class="fixed"><img src="./picture/5.jpg"></div>
 
 <script type="text/javascript">
-	$.get("./addition/2.html",function(result)
-    {
-        $("#title").html(result);
-    });
-    function setCookie(cname,cvalue,exdays){
-    var d = new Date();
-    d.setTime(d.getTime()+(exdays*1*60*60*1000));
-    var expires = "expires="+d.toGMTString();
-    document.cookie = cname+"="+cvalue+"; "+expires;
-}
-function getCookie(cname){
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i].trim();
-        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
-    }
-    return "";
-}
-function checkCookie(){
-    var user=getCookie("username");
-    if (user!=""){
-        alert("欢迎 " + user + " 再次访问");
-    }
-    else {
-        user = prompt("请输入你的名字:","");
-          if (user!="" && user!=null){
-            setCookie("username",user,30);
-        }
-    }
-}
+	
 </script>
 </body>
 </html>

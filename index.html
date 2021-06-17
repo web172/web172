@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="./dist/jSlider.min.css">
      <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
      <link rel="stylesheet" href="./css/index.css">
+     <script src="./js/index.js"></script>
+
+	<script src="./js/jquary.js"></script>
+	 <link rel="icon" type="text/css" href="./picture/switch.png">
 	<title>任天堂</title>
 </head>
 <body background=".\picture\o.jpg" onload="checkCookie()">
@@ -49,10 +53,11 @@
 		
 	</div>
 
-    <script src="./js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<div style="margin-left: 0px;"><h1>ps:小玩怡情，适度消费</h1></div>
+     <script src="./js/jquery-1.11.0.min.js" type="text/javascript"></script>
 	<script src="./dist/jquery.jSlider.min.js"></script>
 	<script type="text/javascript">
-	$.get("./addition/2.html",function(result)
+		 $.get("./addition/2.html",function(result)
     {
         $("#page").html(result);
     });

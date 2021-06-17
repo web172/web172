@@ -44,4 +44,8 @@
 			bottom: 0;
 			right: 0;
 		}
+		.p1{
+ 	width: 474px; height: 266px;
+    background: url('./picture/css_sprites.png') -10px -458px;
+    	}
 	</style>
